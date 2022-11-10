@@ -1,8 +1,39 @@
-<h1>Welcome to my app!</h1>
+<header class="text-gray-600 body-font">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-xl">Blogging2Nite</span>
+    </a>
+  </div>
+</header>
+
+<strong><center><h1 class="ml-3 text-xl p-5">Welcome!</h1></center></strong>
+<center><p>Looking to start your own blog but don't know where to begin? Get started below!</p></center>
+
+<section class="text-gray-600 body-font">
+  <div id="mainback" class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap -mx-4 -mb-10 text-center">
+      <div class="sm:w-1/2 mb-10 px-4">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="assets/images/pexels-andrea-piacquadio-3777727.jpg">
+        </div>
+        <h2 class="title-font text-2xl font-medium text-gray-900 mt-6 mb-3">Login To Your Account</h2>
+        <button class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded"><a href="/user/login">Sign In</a></button>
+      </div>
+      <div class="sm:w-1/2 mb-10 px-4">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="assets/images/pexels-adrienn-1524105.jpg">
+        </div>
+        <h2 class="title-font text-2xl font-medium text-gray-900 mt-6 mb-3">New Here?</h2>
+        <button class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded"><a href="/user/signup">Sign Up</a></button>
+      </div>
+    </div>
+  </div>
+</section>
 <ul>
   {{#if currentUser}}
     <li><a href="/{{currentUser.details.username}}">Go to your dashboard</a></li>
-  {{else}}
-    <li><a href="/user/signup">Sign up for an account</a></li>
   {{/if}}
 </ul>
