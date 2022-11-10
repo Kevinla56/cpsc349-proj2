@@ -3,11 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blogging2Nite</title>
+  <title>Bloggin2Nite</title>
   <link rel="stylesheet" type="text/css" href="/assets/css/_remake.css">
   <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
 </head>
+
 <body>
+  {{!-- {{#if currentUser}}
+    <a href="/user/logout">Logout</a>
+  {{else}}
+    <a class="nav__button" href="/user/signup">Sign up</a>
+    &nbsp;
+    <a class="nav__button" href="/user/login">Log in</a>
+  {{/if}} --}}
   {{!-- Show errors --}}
   {{#if flashErrors }}
     {{#each flashErrors }}
@@ -30,4 +38,6 @@
   {{/if}}
   <script src="/assets/js/main.js"></script>
 </body>
+
 </html>
+
