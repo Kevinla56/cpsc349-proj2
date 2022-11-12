@@ -13,6 +13,13 @@
           <a href="/user/logout">Logout</a>
       {{/if}}
     </nav>
+    {{#if currentUser}}
+      <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"><a href="/{{currentUser.details.username}}">Go to dashboard</a>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    {{/if}}
   </div>
 </header>
 
@@ -47,10 +54,10 @@
           <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg" type="submit">Sign in</button>
         </div>
         <div class="p-2 w-full mt-8 text-center">
-          <a class="link link-secondary" href="/user/signup">Create a free account</a>
+          <a class="link link-secondary text-gray-600 hover:text-gray-500" style="text-decoration: none;" href="/user/signup">Create a free account</a>
           <br>
           <br>
-          <a class="link link-secondary" href="/user/forgot">Forgot your password?</a>
+          <a class="link link-secondary text-gray-600 hover:text-gray-500" style="text-decoration: none;" href="/user/forgot">Forgot your password?</a>
         </div>
 
       </div>
